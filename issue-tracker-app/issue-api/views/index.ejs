@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" />
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <ng-view></ng-view>
+    <!-- Templates  -->
+    <script type="text/ng-template" id="/projects.html">
+        <!-- styles -->
+        <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" />
+        <!-- {{ projects }} -->
+        <table class="table table-bordered table-hover ">
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Project Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="project in projects">
+                  <td> {{ project.ProjectName }} </td>
+                  <td>Column content</td>
+                </tr>
+              </tbody>
+            </table>
+    </script>
+
+
+
+    <script>
+        angular.module('app', ['ngRoute', 'ngResource'])
+
+        /* Services */
+        .factory('Projects', ['$resource', ($resource) => {
+            return $resource('/projects/:id', null, {
+                'update': {method: 'PUT'}
+            });
+        }])
+
+        /* Controllers */
+        .controller('ProjectController', ['$scope', 'Projects', ($scope, Projects) => {
+            $scope.projects = Projects.query();
+            $scope.test = "TEST";
+        }])
+
+        /* routes */
+        .config(['$routeProvider', ($routeProvider) => {
+            $routeProvider
+                .when('/', {
+                    templateUrl: '/projects.html',
+                    controller: 'ProjectController',
+                })
+        }])
+    </script>
   </body>
 </html>

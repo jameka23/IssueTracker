@@ -38,8 +38,8 @@ const Users = conn.import('../models/IssueTracker_Users.js')
 /**
  *  GET project listing.
  *  test in bash with:
- *  curl localhost:3000/todos
-*/
+ *  curl localhost:3000/projects
+ */
 router.get('/', (req, res, next) => {
     Projects.findAll()
     .then(projects => {

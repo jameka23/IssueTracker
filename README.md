@@ -26,7 +26,7 @@ You can also test the CRUD functionality in bash using curl. Leave the server ru
 
 Get Project Listing:
 ```
-curl localhost:3000/todos
+curl localhost:3000/projects
 ```
 
 Create a project: (replace SOME_UNIQUE_ID with unique id)

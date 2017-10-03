@@ -1,5 +1,5 @@
 # Issue Tracker
-Issue Tracker is an application to allow developers at decision source to log ther billable hours. It is currently being developed.
+Issue Tracker is an application to allow developers at decision source to log their billable hours. It is currently being developed.
 ## Usage
 Right now, it's just a simple RESTful api. To test it out, do the following:
 
@@ -12,11 +12,11 @@ To test the api, cd to the directory containing the api.
 cd IssueTracker/issue-tracker-app/issue-api/
 ```
 
-Once here, you can run the server in your bash client with:
+Once here, assuming you have node installed you can run the server in your bash client with:
 ```
 PORT=3000 npm start
 ```
-Or, if you have ndoemon:
+Or, if you have nodemon:
 ```
 nodemon
 ```
@@ -38,4 +38,4 @@ Get a particular project by id: (replace SOME_UNIQUE_ID with unique id)
 curl -XGET http://localhost:3000/projects/{SOME_UNIQUE_ID}
 ```
 
-More examples can be found in the IssueTracker/issue-tracker-app/issue-api/routes/projects.js file. I would reccomend taking a look at this file, as it's the bulk of the api.
+More examples can be found in the IssueTracker/issue-tracker-app/issue-api/routes/projects.js file. I would recommend taking a look at this file, as it's the bulk of the api.

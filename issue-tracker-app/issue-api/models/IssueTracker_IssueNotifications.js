@@ -25,6 +25,7 @@ module.exports = function(sequelize, DataTypes) {
 			}
 		}
 	}, {
-		tableName: 'IssueTracker_IssueNotifications'
+		tableName: 'IssueTracker_IssueNotifications',
+        timestamps: false
 	});
 };

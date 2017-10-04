@@ -120,6 +120,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true
 		}
 	}, {
-		tableName: 'IssueTracker_Issues'
+		tableName: 'IssueTracker_Issues',
+        timestamps: false
 	});
 };

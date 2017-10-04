@@ -41,6 +41,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		}
 	}, {
-		tableName: 'IssueTracker_Worklogs'
+		tableName: 'IssueTracker_Worklogs',
+        timestamps: false
 	});
 };

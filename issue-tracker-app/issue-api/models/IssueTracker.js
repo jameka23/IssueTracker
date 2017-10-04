@@ -7,6 +7,8 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true
 		}
 	}, {
-		tableName: 'IssueTracker'
+		tableName: 'IssueTracker',
+		timestamps: false
+
 	});
 };

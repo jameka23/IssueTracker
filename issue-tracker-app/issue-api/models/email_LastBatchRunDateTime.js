@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
 			primaryKey: true
 		}
 	}, {
-		tableName: 'email_LastBatchRunDateTime'
+		tableName: 'email_LastBatchRunDateTime',
+        timestamps: false
 	});
 };

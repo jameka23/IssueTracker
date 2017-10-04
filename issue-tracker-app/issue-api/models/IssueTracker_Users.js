@@ -43,6 +43,7 @@ module.exports = function(sequelize, DataTypes) {
 			}
 		}
 	}, {
-		tableName: 'IssueTracker_Users'
+		tableName: 'IssueTracker_Users',
+        timestamps: false
 	});
 };

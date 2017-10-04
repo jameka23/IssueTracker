@@ -21,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
 			}
 		}
 	}, {
-		tableName: 'IssueTracker_ProjectStatusMap'
+		tableName: 'IssueTracker_ProjectStatusMap',
+        timestamps: false
 	});
 };

@@ -50,6 +50,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true
 		}
 	}, {
-		tableName: 'IssueTracker_IssueComments'
+		tableName: 'IssueTracker_IssueComments',
+        timestamps: false
 	});
 };

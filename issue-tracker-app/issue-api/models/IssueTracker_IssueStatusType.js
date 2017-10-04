@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   }, {
-    tableName: 'IssueTracker_IssueStatusType'
+    tableName: 'IssueTracker_IssueStatusType',
+      timestamps: false
   });
 };

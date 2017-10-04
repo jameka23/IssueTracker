@@ -21,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		}
 	}, {
-		tableName: 'IssueTracker_ProjectSLARolloverHours'
+		tableName: 'IssueTracker_ProjectSLARolloverHours',
+        timestamps: false
 	});
 };

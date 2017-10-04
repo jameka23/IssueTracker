@@ -29,6 +29,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		}
 	}, {
-		tableName: 'IssueTracker_ProjectCustomFields'
+		tableName: 'IssueTracker_ProjectCustomFields',
+        timestamps: false
 	});
 };

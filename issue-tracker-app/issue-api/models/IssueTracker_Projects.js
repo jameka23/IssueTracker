@@ -47,6 +47,6 @@ module.exports = function(sequelize, DataTypes) {
 		}
 	}, {
 		tableName: 'IssueTracker_Projects',
-    timestamps: false
+    	timestamps: false
 	});
 };

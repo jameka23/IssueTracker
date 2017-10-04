@@ -38,6 +38,7 @@ module.exports = function(sequelize, DataTypes) {
 			}
 		}
 	}, {
-		tableName: 'IssueTracker_IssueStatus'
+		tableName: 'IssueTracker_IssueStatus',
+        timestamps: false
 	});
 };

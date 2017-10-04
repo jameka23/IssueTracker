@@ -13,6 +13,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		}
 	}, {
-		tableName: 'IssueTracker_Roles'
+		tableName: 'IssueTracker_Roles',
+        timestamps: false
 	});
 };

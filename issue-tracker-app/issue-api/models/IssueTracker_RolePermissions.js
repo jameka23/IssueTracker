@@ -21,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
 			}
 		}
 	}, {
-		tableName: 'IssueTracker_RolePermissions'
+		tableName: 'IssueTracker_RolePermissions',
+        timestamps: false
 	});
 };

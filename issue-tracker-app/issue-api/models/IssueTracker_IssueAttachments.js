@@ -33,6 +33,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true
 		}
 	}, {
-		tableName: 'IssueTracker_IssueAttachments'
+		tableName: 'IssueTracker_IssueAttachments',
+        timestamps: false
 	});
 };

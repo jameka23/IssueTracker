@@ -71,7 +71,7 @@ module.exports = function(sequelize, DataTypes) {
 		DateCreated: {
 			type: DataTypes.DATE,
 			allowNull: false,
-			defaultValue: '(getdate())'
+            defaultValue: new Date().toUTCString()
 		},
 		Disabled: {
 			type: DataTypes.BOOLEAN,
@@ -89,7 +89,7 @@ module.exports = function(sequelize, DataTypes) {
 		EstimatedTime: {
 			type: DataTypes.FLOAT,
 			allowNull: false,
-			defaultValue: '((0.0))'
+			defaultValue: 0.0
 		},
 		DueDate: {
 			type: DataTypes.DATE,

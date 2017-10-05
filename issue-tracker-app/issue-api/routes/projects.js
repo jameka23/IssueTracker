@@ -120,12 +120,9 @@ router.delete('/:id', (req, res, next) => {
             ProjectId: req.params.id,
         }
     })
+    // TODO: error catching here
     .then((err, result) => {
-        // TODO: even though this seems to work fine, there is an error.
-        //       you can see it with the following line
-        //       res.sendStatus(err);
-
-        res.json(result);
+        res.json({ message: 'Successfully deleted' });
     });
 
 });

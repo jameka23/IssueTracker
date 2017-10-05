@@ -58,14 +58,14 @@
             <thead>
               <tr class="active">
                 <th class="col-xs-2">Project</th>
-                <th class="col-xs-2">Task</th>
+                <th class="col-xs-2">Issue</th>
                 <th class="col-xs-1">Mon 20</th>
                 <th class="col-xs-1">Tue 21</th>
                 <th class="col-xs-1">Wed 22</th>
                 <th class="col-xs-1">Thu 23</th>
                 <th class="col-xs-1">Fri 24</th>
-                <th class="col-xs-1">Sat 25</th>
-                <th class="col-xs-1">Sun 26</th>
+                <th ng-show="showWeekend" class="col-xs-1">Sat 25</th>
+                <th ng-show="showWeekend" class="col-xs-1">Sun 26</th>
               </tr>
             </thead>
             <tbody>
@@ -78,24 +78,28 @@
                 </td>
                 <td>
                     <select class="form-control" id="sel1">
-                        <option>Select a Task</option>
+                        <option>Select an Issue</option>
                         <option ng-repeat="t in projects[0].tasks">{{ t }}</option>
                     </select>
                     <!-- <select class="form-control">
                     </select>  -->
                 </td>
-                <td> <input class="form-control" value="{{ e.hours[0] }}" /></td>
-                <td> <input class="form-control" value="{{ e.hours[1] }}" /></td>
-                <td> <input class="form-control" value="{{ e.hours[2] }}" /></td>
-                <td> <input class="form-control" value="{{ e.hours[3] }}" /></td>
-                <td> <input class="form-control" value="{{ e.hours[4] }}" /></td>
-                <td> <input class="form-control" value="{{ e.hours[4] }}" /></td>
-                <td> <input class="form-control" value="{{ e.hours[4] }}" /></td>
+                <td> <input class="form-control" value="{{ e.hours[0] }}" onFocus="this.select()"/></td>
+                <td> <input class="form-control" value="{{ e.hours[1] }}" onFocus="this.select()"/></td>
+                <td> <input class="form-control" value="{{ e.hours[2] }}" onFocus="this.select()"/></td>
+                <td> <input class="form-control" value="{{ e.hours[3] }}" onFocus="this.select()"/></td>
+                <td> <input class="form-control" value="{{ e.hours[4] }}" onFocus="this.select()"/></td>
+                <td ng-show="showWeekend"> <input class="form-control" value="{{ e.hours[5] }}" /></td>
+                <td ng-show="showWeekend"> <input class="form-control" value="{{ e.hours[6] }}" /></td>
               </tr>
               <tr>
                   <td>
                       <span class="glyphicon glyphicon-plus"></span>
-                      <a href="" ng-click="addEntry()">Click here to add task</a>
+                      <a href="" ng-click="addEntry()">Click here to add issue</a>
+                  </td>
+                  <td>
+                      Show Weekend: &nbsp;
+                      <input ng-model="showWeekend" type="checkbox" />
                   </td>
               </tr>
 

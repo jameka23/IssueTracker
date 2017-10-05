@@ -1,7 +1,7 @@
 angular.module('app', ['ngRoute'])
     .factory('TimeEntries', function () {
         return  [
-            { project: 'Online Banking App', task: 'update login page', hours: [1.5, 0, 0, 0, 0] },
+            { project: 'Online Banking App', task: 'update login page', hours: [0, 0, 0, 0, 0, 0, 0] },
             // { project: 'Online Banking App', task: 'implement login authentication', hours: [5.5, 1, 0, 0, 0]},
             // { project: 'Android Rest API', task: 'refactor back end', hours: [1.5, 1, 4, 1, 8]},
             // { project: 'Medicade System', task: 'Database design', hours: [0, 1, 8, 8, 0]},
@@ -17,10 +17,11 @@ angular.module('app', ['ngRoute'])
     .controller('TimeEntriesController', ['$scope', 'Projects', 'TimeEntries', function ($scope, Projects, TimeEntries) {
         $scope.entries = TimeEntries;
         $scope.projects = Projects;
+        $scope.showWeekend = false;
 
         $scope.addEntry = function () {
             console.log("add");
-            $scope.entries.push({ project: 'select project', task: 'select task', hours: [0, 0, 0, 0, 0]});
+            $scope.entries.push({ project: 'select project', task: 'select task', hours: [0, 0, 0, 0, 0, 0, 0]});
         }
     }])
 

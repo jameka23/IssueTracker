@@ -32,3 +32,29 @@ angular.module('app', ['ngRoute'])
                 controller: 'TimeEntriesController',
             })
     }])
+
+var login = angular.module("login", ["ui.router"]);
+login.config(function ($stateProvider, $urlRouterProvider) {
+   $stateProvider
+       .state("login", {
+           url: "/login",
+           templateURL: "login.html",
+           controller: "LoginController"
+       })
+       .state("secure", {
+           url: "/index",
+           templateURL: "index.html",
+           controller: "SecureController"
+       })
+    $urlRouterProvider.otherwise("/login");
+});
+
+login.controller("LoginController", function($scope){
+    $scope.login = function() {
+        window.location.href = 
+    }
+});
+
+login.controller("SecureController", function($scope){
+
+});

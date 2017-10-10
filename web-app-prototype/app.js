@@ -51,7 +51,7 @@ login.config(function ($stateProvider, $urlRouterProvider) {
 
 login.controller("LoginController", function($scope){
     $scope.login = function() {
-        window.location.href = 
+        window.location.href =
     }
 });
 

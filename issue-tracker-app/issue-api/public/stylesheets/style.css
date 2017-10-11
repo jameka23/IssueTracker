@@ -23,6 +23,7 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0px;
 }
 
 /* helpers/grid.css */
@@ -44,6 +45,12 @@ label.check {
   max-width: 320px;
   max-width: 20rem;
   width: 90%;
+}
+
+.ng-scope {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 /* helpers/hidden.css */
@@ -88,7 +95,7 @@ html {
 }
 
 body {
-  background-image: url(../img/developers-full-blur.jpg);
+  background-image: url(../images/developers-full-blur.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -11,6 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js"></script>
         <!-- styles -->
         <link rel="stylesheet" href='/stylesheets/style.css'>
+        <link rel="stylesheet" href='/stylesheets/dsi-logo.css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     </head>
 
@@ -18,7 +19,31 @@
         <ng-view></ng-view>
         <!-- Template  -->
         <script type="text/ng-template" id="/login.html">
+            <div class="dsi-logo">
+                <a href="/login" border="0">
+                    <div class="dsi-dots">
+                        <div class="dsi-dot dsi-dot-col-1 dsi-dot-row-5"></div>
+                        <div class="dsi-dot dsi-dot-col-1 dsi-dot-row-4"></div>
 
+                        <div class="dsi-dot dsi-dot-col-2 dsi-dot-row-5"></div>
+                        <div class="dsi-dot dsi-dot-col-2 dsi-dot-row-4"></div>
+                        <div class="dsi-dot dsi-dot-col-2 dsi-dot-row-3"></div>
+                        <div class="dsi-dot dsi-dot-col-2 dsi-dot-row-2"></div>
+
+                        <div class="dsi-dot dsi-dot-col-3 dsi-dot-row-5"></div>
+                        <div class="dsi-dot dsi-dot-col-3 dsi-dot-row-4"></div>
+                        <div class="dsi-dot dsi-dot-col-3 dsi-dot-row-3"></div>
+
+                        <div class="dsi-dot dsi-dot-col-4 dsi-dot-row-5"></div>
+                        <div class="dsi-dot dsi-dot-col-4 dsi-dot-row-4"></div>
+                        <div class="dsi-dot dsi-dot-col-4 dsi-dot-row-3"></div>
+                        <div class="dsi-dot dsi-dot-col-4 dsi-dot-row-2"></div>
+                        <div class="dsi-dot dsi-dot-col-4 dsi-dot-row-1"></div>
+                    </div>
+                    <h1>Decision <em>Source</em>
+                    </h1>
+                </a>
+            </div>
             <div class="grid">
 
                 <form class="form login" ng-submit="loginAuthenticate()">

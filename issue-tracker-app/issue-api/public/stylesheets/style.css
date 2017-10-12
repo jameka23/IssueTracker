@@ -206,7 +206,7 @@ input[type='submit'] {
 }
 
 .login input[type='submit'] {
-  background-color: #ff0000;
+  background-color: #cc0000;
   color: #eee;
   font-weight: 700;
   text-transform: uppercase;
@@ -228,6 +228,15 @@ p {
 
 .text--center {
   text-align: center;
+}
+
+.form__login h1 {
+  text-align: center;
+  color: #cc0000;
+}
+
+.form__login h1 em {
+  color: #000000;
 }
 
 /* login form css ends here */
